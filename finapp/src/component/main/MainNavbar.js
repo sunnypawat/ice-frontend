@@ -1,7 +1,13 @@
 'use client'
+import Course from '@/page/Course';
+import Home from '@/page/Home';
+import Chart from '@/page/Course'
+import Market from '@/page/Market'
+import News from '@/page/News'
+import Login from '@/page/Login';
 import React, { useState } from 'react';
 
-function Navbar() {
+export default function MainNavbar() {
   const [activeSection, setActiveSection] = useState('home');
 
   const navigateTo = (sectionId) => {
@@ -12,45 +18,27 @@ function Navbar() {
     switch (activeSection) {
       case 'home':
         return (
-          <section id="home">
-            <h1>Home Page</h1>
-            <p>Welcome to the home page!</p>
-          </section>
+          <Home/>
         );
       case 'course':
         return (
-          <section id="course">
-            <h1>Course Selection</h1>
-            <p>Select some trading and investment courses</p>
-          </section>
+          <Course/>
         );
       case 'chart':
         return (
-          <section id="chart">
-            <h1>Stock Graph</h1>
-            <p>Some stock graph pics.</p>
-          </section>
+          <Chart/>
         );
       case 'market':
         return (
-          <section id="market">
-            <h1>Overall Stock Market</h1>
-            <p>See some market trends</p>
-          </section>
+          <Market/>
         );
       case 'news':
         return (
-          <section id="news">
-            <h1>News</h1>
-            <p>See some up-to-date news</p>
-          </section>
+          <News/>
         );
       case 'login':
         return (
-          <section id="login">
-            <h1>Login</h1>
-            <p>Enter your username and password</p>
-          </section>
+          <Login/>
         );
       default:
         return null;
@@ -75,4 +63,3 @@ function Navbar() {
   );
 }
 
-export default Navbar;
