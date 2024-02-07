@@ -1,18 +1,21 @@
 import React from 'react';
+import './NewsHighlight.css';
 
 const NewsHighlight = ({ imageSrc, title, description, date, summary, keyTakeaway }) => {
   return (
     <div className="news-highlight">
-      <img src={imageSrc} alt={title} className="news-image" />
+      <img src={imageSrc} className="news-image" />
       <div className="news-content">
         <h2 className="news-title">{title}</h2>
-        <p className="news-date">{date}</p>
         <p className="news-description">{description}</p>
+        <p className="news-date">{date}</p>
         <div className="news-summary">
-          <strong>Summary:</strong> {summary}
+          <strong>Summary:</strong> 
+          <p>{summary}</p>
         </div>
         <div className="news-key-takeaway">
-          <strong>Key Takeaway:</strong> {keyTakeaway}
+          <strong>Key Takeaway:</strong> 
+          <p>{keyTakeaway}</p>
         </div>
       </div>
     </div>
