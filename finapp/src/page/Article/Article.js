@@ -22,13 +22,15 @@ export default function Article() {
 
   return (
     <div>
-      <h1>Article 1</h1>
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <ul>
-          {data.title}
-        </ul>
+        <div>
+          <h1>{data.title}</h1>
+          <h3>{data.date}</h3>
+          <h3>{data.author}</h3>
+          <p>{data.content}</p>
+        </div>
       )}
     </div>
   );
