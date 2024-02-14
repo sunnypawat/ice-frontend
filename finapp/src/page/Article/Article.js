@@ -1,9 +1,7 @@
-import Image from 'next/image'
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-export default function News() {
+export default function Article() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -20,19 +18,19 @@ export default function News() {
     };
 
     fetchData();
-  }, []);
+  }, []); // The empty dependency array ensures that the effect runs only once when the component mounts
 
   return (
     <div>
-      <h1>News highlight</h1>
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <ul>
-          {data.map(item => (
-            <li key={item.id}>{item.name}</li>
-          ))}
-        </ul>
+        <div>
+          <h1>{data.title}</h1>
+          <h3>{data.date}</h3>
+          <h3>{data.author}</h3>
+          <p>{data.content}</p>
+        </div>
       )}
     </div>
   );
