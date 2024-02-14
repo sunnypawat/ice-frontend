@@ -1,0 +1,81 @@
+.news-highlight {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 97%; /* Adjust based on your layout, it will take almost entire width of the screen */
+    margin: 0 auto; /* Center the card on the page */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #ffffff; /* Change as per your theme */
+    max-height: 300px;
+  }
+  
+  .news-highlight:hover {
+    box-shadow: 0 25px 50px 0 rgba(0,0,0,0.2);
+  }
+
+  .news-image {
+    width: 40%; /* Image takes 40% of the card, adjust as needed */
+    object-fit: cover;
+    height: 80%; /* Image height will match the card height */
+    border-radius: 15px;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .news-content {
+    padding: 20px;
+    width: 60%; /* Content takes the remaining 60% of the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .news-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333; /* Or any color as per your theme */
+    margin-bottom: 10px;
+  }
+  
+  .news-description {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .news-date {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .news-summary {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .news-key-takeaway {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* You can add media queries to ensure responsiveness on different screen sizes */
+  @media (max-width: 768px) {
+    .news-highlight {
+      flex-direction: column;
+    }
+    
+    .news-image {
+      width: 100%;
+      height: auto;
+      max-height: 200px;
+    }
+  
+    .news-content {
+      width: 100%;
+    }
+  }
+  
