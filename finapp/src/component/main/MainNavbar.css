@@ -1,52 +1,64 @@
 nav {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #C0E0FC; /* Light grey background */
-    padding: 10px 0; /* Padding at top and bottom */
-    border-bottom: 2px solid #cccccc; /* Border at the bottom of the navbar */
-  }
-  
-  button {
-    background-color: #ffffff; /* White background for buttons */
-    border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 10px; /* Rounded corners for buttons */
-    font-size: 16px; /* Adjust size as needed */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #f2f2f2; /* Lighter grey background on hover */
-  }
-  
-  button:focus,
-  button:active {
-    outline: none;
-    box-shadow: 0 0 0 2px #2473fa; /* Blue outline to show active/focus state */
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  /* Highlight the active button based on activeSection state */
-  button.active {
-    background-color: #2473fa; /* Blue background for active button */
-    color: #ffffff; /* White text for active button */
-  }
-  
-  /* Adjustments for responsiveness, for example on smaller screens */
-  @media (max-width: 768px) {
-    nav {
+  display: flex;
+  justify-content: space-between; /* Adjusted for spacing based on the image */
+  align-items: center;
+  background-color: #C0E0FC; /* Adjusted the background color to match the image */
+  padding: 10px 5%; /* Adjust padding for alignment */
+  border-bottom: 2px solid #cccccc; /* Border at the bottom of the navbar */
+}
+
+button {
+  background-color: #ffffff; /* White background for buttons */
+  border: 1px solid #cccccc; /* Added border to match the image */
+  padding: 10px 15px; /* Adjust padding to match the image */
+  margin: 0; /* Adjusted margin to match the image */
+  border-radius: 5px; /* Adjusted border-radius to match the image */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative; /* To position the user icon if necessary */
+}
+
+button:hover {
+  background-color: #f2f2f2; /* Lighter grey background on hover */
+}
+
+button:focus,
+button:active {
+  outline: none;
+  box-shadow: 0 0 0 2px #2473fa; /* Blue outline to show active/focus state */
+}
+
+button.login-button {
+  padding-right: 40px; /* Extra padding to accommodate the user icon */
+}
+
+button.login-button::after {
+  /*content: url('path_to_your_user_icon.png'); Add the path to your user icon image */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+main {
+  padding: 20px;
+}
+
+/* Highlight the active button based on activeSection state */
+button.active {
+  background-color: #2473fa; /* Blue background for active button */
+  color: #ffffff; /* White text for active button */
+}
+
+/* Adjustments for responsiveness, for example on smaller screens */
+@media (max-width: 768px) {
+  nav {
       flex-direction: column;
-    }
-  
-    button {
+  }
+
+  button {
       width: 100%;
       margin: 5px 0; /* Stack buttons with space in between */
-    }
   }
-  
+}
