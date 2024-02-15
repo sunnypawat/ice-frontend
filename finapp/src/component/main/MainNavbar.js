@@ -6,6 +6,8 @@ import Market from '@/page/Market'
 import News from '@/page/News'
 import Login from '@/page/Login';
 import React, { useState } from 'react';
+import './MainNavbar.css';
+
 
 export default function MainNavbar() {
   const [activeSection, setActiveSection] = useState('home');
@@ -13,6 +15,7 @@ export default function MainNavbar() {
   const navigateTo = (sectionId) => {
     setActiveSection(sectionId);
   };
+
 
   const renderSection = (activeSection) => {
     switch (activeSection) {
