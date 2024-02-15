@@ -3,7 +3,7 @@ import NewsHighlight from '@/component/news/NewsHighlight'
 import NewCard from '@/component/news/NewsCard'
 
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+//import axios from 'axios';
 
 export default function News() {
   const [data, setData] = useState([]);
