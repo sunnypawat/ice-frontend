@@ -1,3 +1,11 @@
+h3 {
+    font-weight: 500;
+}
+
+p {
+    margin: 1% 1%;
+}
+
 .footer {
     position: fixed;
     left: 0;
@@ -6,9 +14,18 @@
     background-color: #8BBBF8;
     display: flex;
     min-height: 15%;
+    justify-content: space-between;
+    flex-direction: column;
 }
   
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 200px;
+    margin-top: 1.5%;
+    margin-bottom: 4%;
+    margin-left: 2%;
+    margin-right: 5%;
+}
+
+.container-out {
+    display: flex;
 }
