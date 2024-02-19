@@ -60,7 +60,7 @@ export default function MainNavbar() {
         <button className={getButtonClass('chart')} onClick={() => navigateTo('chart')}>Chart</button>
         <button className={getButtonClass('market')} onClick={() => navigateTo('market')}>Market</button>
         <button className={getButtonClass('news')} onClick={() => navigateTo('news')}>News</button>
-        <button className={getButtonClass('login')} onClick={() => navigateTo('login')}>Login</button>
+        <button className={`${getButtonClass('login')} loginButton`} onClick={() => navigateTo('login')}>Login</button>
       </nav>
 
       <main>
