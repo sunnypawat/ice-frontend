@@ -1,64 +1,50 @@
 nav {
   display: flex;
-  justify-content: space-between; /* Adjusted for spacing based on the image */
+  justify-content: flex-start; /* Changed to flex-start to align items to the left */
   align-items: center;
-  background-color: #C0E0FC; /* Adjusted the background color to match the image */
-  padding: 10px 5%; /* Adjust padding for alignment */
-  border-bottom: 2px solid #cccccc; /* Border at the bottom of the navbar */
+  background: linear-gradient(to bottom, rgba(192, 224, 252, 1), rgba(192, 224, 252, 0.48));
+  padding: 5px 3%;
+  border-bottom: 2px solid #cccccc;
 }
 
 button {
-  background-color: #ffffff; /* White background for buttons */
-  border: 1px solid #cccccc; /* Added border to match the image */
-  padding: 10px 15px; /* Adjust padding to match the image */
-  margin: 0; /* Adjusted margin to match the image */
-  border-radius: 5px; /* Adjusted border-radius to match the image */
+  background-color: rgb(255, 255, 255, 0.53);
+  border: 1px solid #cccccc;
+  padding: 9px 36px;
+  margin: 0 28px 0 0; /* Add right margin to space the buttons */
+  border-radius: 10px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  position: relative; /* To position the user icon if necessary */
+  position: relative;
+  font-family: 'Plus Jakarta Sans', sans-serif;;
 }
 
-button:hover {
-  background-color: #f2f2f2; /* Lighter grey background on hover */
+.loginButton {
+  margin-left: auto;
 }
 
-button:focus,
-button:active {
-  outline: none;
-  box-shadow: 0 0 0 2px #2473fa; /* Blue outline to show active/focus state */
-}
-
-button.login-button {
-  padding-right: 40px; /* Extra padding to accommodate the user icon */
-}
-
-button.login-button::after {
-  /*content: url('path_to_your_user_icon.png'); Add the path to your user icon image */
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-main {
-  padding: 20px;
-}
+/* The rest of your button styles remain unchanged */
 
 /* Highlight the active button based on activeSection state */
 button.active {
-  background-color: #2473fa; /* Blue background for active button */
-  color: #ffffff; /* White text for active button */
+  background-color: #2473fa;
+  color: #ffffff;
 }
 
 /* Adjustments for responsiveness, for example on smaller screens */
 @media (max-width: 768px) {
   nav {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   button {
-      width: 100%;
-      margin: 5px 0; /* Stack buttons with space in between */
+    width: 100%;
+    margin: 2px 0; /* Stack buttons with space in between */
+  }
+
+  /* Remove the auto margin on smaller screens to stack the buttons */
+  button:not(:first-child) {
+    margin-left: 0;
   }
 }
