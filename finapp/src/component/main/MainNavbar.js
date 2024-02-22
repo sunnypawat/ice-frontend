@@ -4,7 +4,7 @@ import Home from '@/page/Home';
 import Chart from '@/page/Course'
 import Market from '@/page/Market'
 import News from '@/page/News'
-import Login from '@/page/Login';
+import Login from '@/page/Login/Login';
 import React, { useState } from 'react';
 
 export default function MainNavbar() {
