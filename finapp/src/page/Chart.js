@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-export default function Course() {
+export default function Chart() {
   return (
     <div id="home">
         <h1>Stock Graph</h1>
