@@ -59,7 +59,7 @@ export default function Login() {
         </div>
         <br />
         <div className={'inputContainer'}>
-          <input className={'loginButton'} type="button" onClick={onButtonClick} value={'Log in'} />
+          <input className={'loginLoginButton'} type="button" onClick={onButtonClick} value={'Log in'} />
         </div>
 
         <div className='resetPasswordContainer'>
