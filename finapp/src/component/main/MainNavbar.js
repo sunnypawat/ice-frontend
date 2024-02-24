@@ -1,6 +1,6 @@
 'use client'
 import Course from '@/page/Course';
-import Home from '@/page/Home';
+import Home from '@/page/Home/Home';
 import Chart from '@/page/Chart'
 import Market from '@/page/Market'
 import News from '@/page/News'

@@ -1,0 +1,36 @@
+.start {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(180deg, #8ABDFF 0%, rgba(150, 82, 255, 0.29) 99.99%, #9747FF 100%);
+    color: white;
+}
+
+.startTitle {
+    margin: 10px auto;
+}
+
+.startDescription {
+    margin: 10px auto;
+}
+
+.getStartedButton { 
+    background: #E3F3FF;
+    width: 200px;
+    height: 80px;
+    font-size: 30px;
+    font-weight: 600;
+    color: black;
+    border-radius: 25px;
+    margin: 5px auto;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.getStartedButton:hover {
+    background-color: #2473fa;
+    color: #ffffff;
+}

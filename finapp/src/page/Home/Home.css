@@ -1,0 +1,14 @@
+.newsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 30px auto;
+}
+
+.newsStartTitles {
+    margin: 30px auto;
+}
+
+.newsView {
+    padding: 20px 5%;
+}
