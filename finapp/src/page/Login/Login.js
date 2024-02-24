@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Login.css'
 
 export default function Login() {
@@ -12,17 +13,17 @@ export default function Login() {
     setPasswordError('')
 
     if ('' === username) {
-      setUsernameError('Please enter your email')
+      setUsernameError('*')
       return
     }
 
     if ('' === password) {
-      setPasswordError('Please enter a password')
+      setPasswordError('*')
       return
     }
 
     if (password.length < 7) {
-      setPasswordError('The password must be 8 characters or longer')
+      setPasswordError('*')
       return
     }
   }
@@ -36,6 +37,7 @@ export default function Login() {
       <div className='loginContainer'>
         <h1 className='loginTitle'>USER LOGIN</h1>
         <div className={'inputContainer'}>
+          <FontAwesomeIcon />
           <input
             value={username}
             placeholder="Enter username"
@@ -46,6 +48,7 @@ export default function Login() {
         </div>
         <br />
         <div className={'inputContainer'}>
+          <FontAwesomeIcon />
           <input
             value={password}
             placeholder="Enter password"
@@ -59,9 +62,11 @@ export default function Login() {
           <input className={'loginButton'} type="button" onClick={onButtonClick} value={'Log in'} />
         </div>
 
-        <div>
-          forget password?
+        <div className='resetPasswordContainer'>
+          forget password ?
         </div>
+
+        <hr></hr>
 
         <div className={'inputContainer'}>
           <input className={'accountButton'} type="button" onClick={onButtonClick} value={'Create account'} />
