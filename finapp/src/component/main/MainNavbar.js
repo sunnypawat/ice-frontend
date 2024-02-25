@@ -1,5 +1,5 @@
 'use client'
-import Course from '@/page/Course';
+import Course from '@/page/Course/Course';
 import Home from '@/page/Home/Home';
 import Chart from '@/page/Chart'
 import Market from '@/page/Market'
