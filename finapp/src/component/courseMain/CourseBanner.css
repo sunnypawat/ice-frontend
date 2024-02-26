@@ -1,0 +1,78 @@
+.courseBanner {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(180deg, #8ABDFF 0%, rgba(150, 82, 255, 0.29) 99.99%, #9747FF 100%);
+    color: white;
+    text-align: center;
+}
+
+.unlockedBanner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.unlockedPictureContainer {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.courseLevelContainer {
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 30px 0px;
+    padding: 20px 10px;
+    font-size: 20px;
+    border-radius: 0 10px 10px 0;
+    background-color: #14BA6D;
+}
+
+.courseLevelText {
+    margin: 1px 0px;
+    text-align: left;
+}
+
+.courseTitle {
+    margin: 10px auto;
+}
+
+.courseDescription {
+    margin: 10px auto;
+}
+
+.courseButton { 
+    background: #E3F3FF;
+    width: 200px;
+    height: 80px;
+    font-size: 30px;
+    font-weight: 600;
+    color: black;
+    border-radius: 25px;
+    margin: 5px auto;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.courseButton:hover {
+    background-color: #2473fa;
+    color: #ffffff;
+}
