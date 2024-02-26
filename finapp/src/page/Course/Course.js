@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import CourseBanner from '@/component/courseMain/courseBanner'
+import CourseBanner from '@/component/courseMain/CourseBanner'
 
 export default function Course() {
   return (
@@ -10,7 +10,7 @@ export default function Course() {
           title='What is investment?' 
           description='The  great opportunity for you to understand fundamental and technical technique for investing' 
           level='Level 1: Basic' 
-          access={true}
+          access={false}
         />
     </div>
   )
