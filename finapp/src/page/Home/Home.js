@@ -4,8 +4,10 @@ import './Home.css'
 
 import Start from '@/component/home/Start'
 import NewCard from '@/component/news/NewsCard'
+import MarketInfoCard from '@/component/home/MarketInfoCard';
 
 const myArray = [1, 2, 3];
+const marketData = [1, 1, 1];
 
 export default function Home() {
   return (
@@ -50,8 +52,12 @@ export default function Home() {
               />
             ))}
           </div>
+
+          <div className='marketInfoView'>
+          <MarketInfoCard data={marketData} />
+          </div>
+
         </div>
-          
     </div>
   )
 }
