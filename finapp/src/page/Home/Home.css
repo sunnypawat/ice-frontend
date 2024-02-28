@@ -12,3 +12,10 @@
 .newsView {
     padding: 20px 5%;
 }
+
+.marketInfoCardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* This will space out the cards evenly */
+    gap: 20px; /* This adds space between the cards if they wrap to a new line */
+}
