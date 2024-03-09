@@ -1,10 +1,10 @@
 'use client'
-import Course from '@/page/Course/Course';
-import Home from '@/page/Home/Home';
-import Chart from '@/page/Chart'
-import Market from '@/page/Market'
-import News from '@/page/News'
-import Login from '@/page/Login/Login';
+import Course from '@/pages/course/Course';
+import Home from '@/pages/home/Home';
+import Chart from '@/pages/Chart'
+import Market from '@/pages/Market'
+import News from '@/pages/News'
+import Login from '@/pages/login/Login';
 import React, { useState } from 'react';
 import './MainNavbar.css';
 
