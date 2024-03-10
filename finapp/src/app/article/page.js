@@ -1,3 +1,4 @@
+'use client'
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -22,6 +23,7 @@ export default function Article() {
 
   return (
     <div>
+      <h1>Article</h1>
       {loading ? (
         <p>Loading...</p>
       ) : (

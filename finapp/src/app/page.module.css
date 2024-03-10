@@ -75,6 +75,21 @@
   padding: 4rem 0;
 }
 
+.newsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 30px auto;
+}
+
+.newsStartTitles {
+  margin: 30px auto;
+}
+
+.newsView {
+  padding: 20px 5%;
+}
+
 .center::before {
   background: var(--secondary-glow);
   border-radius: 50%;
@@ -196,6 +211,8 @@
     z-index: 1;
   }
 }
+
+
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {

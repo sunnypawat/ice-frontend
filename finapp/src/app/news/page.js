@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image'
 import NewsHighlight from '@/component/news/NewsHighlight'
 import NewCard from '@/component/news/NewsCard'
