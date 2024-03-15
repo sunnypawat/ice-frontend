@@ -1,0 +1,83 @@
+.page-container {
+    font-family: 'Arial', sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .header-image {
+    height: 50vw; /* Responsive height based on the width of the viewport */
+    max-height: 250px; /* Maximum height */
+    background-color: #ccc;
+    background-image: url('/path-to-your-image.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .article-content {
+    padding: 5% 10%; /* Use percentage for responsive padding */
+    word-wrap: break-word; /* Ensures the text fits within the container */
+  }
+  
+  .news-heading {
+    color: #333;
+    margin-bottom: 1em;
+    font-size: 2em; /* Larger size for headings, will scale with font size */
+  }
+  
+  .article-metadata {
+    color: #555;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+    display: flex; /* Use flex layout for metadata */
+    flex-wrap: wrap; /* Wrap items if not enough space */
+    justify-content: space-between; /* Space items nicely */
+  }
+  
+  .date-written {
+    margin-right: 1em;
+    flex-shrink: 0; /* Prevent shrinking on smaller screens */
+  }
+  
+  .author {
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  
+  .text-body p {
+    line-height: 1.6;
+    margin-bottom: 1em;
+  }
+  
+  /* Media Queries for different screen sizes */
+  @media only screen and (max-width: 768px) {
+    .article-content {
+      padding: 5%; /* Less padding on smaller screens */
+    }
+    
+    .news-heading {
+      font-size: 1.5em; /* Smaller font size for headings on smaller screens */
+    }
+    
+    .header-image {
+      height: 30vw; /* Smaller height for the header image on smaller screens */
+      max-height: 200px;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .article-content {
+      padding: 5%; /* Even less padding on very small screens */
+    }
+  
+    .news-heading,
+    .article-metadata,
+    .text-body p {
+      font-size: 1em; /* Default font size for better readability on very small screens */
+    }
+  
+    .header-image {
+      height: 40vw; /* Adjust header image height for very small screens */
+      max-height: 150px;
+    }
+  }
+  
