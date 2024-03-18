@@ -8,14 +8,16 @@ export default function Course() {
     <div id="home">
         <h1>Course Selection</h1>
         <p>Select some trading and investment courses</p>
-        <NextButton />
-        <PreviousButton />
         <CourseBanner 
           title='What is investment?' 
           description='The  great opportunity for you to understand fundamental and technical technique for investing' 
           level='Level 1: Basic' 
           access={false}
         />
+        <div className="navigation-buttons">
+          <PreviousButton />
+          <NextButton />
+        </div>
     </div>
   )
 }
