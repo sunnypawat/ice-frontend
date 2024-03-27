@@ -5,12 +5,11 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
-    height: 82.7vh; /* Full height of the viewport */
+    height: 71.5vh; /* Full height of the viewport */
     box-sizing: border-box; /* Include padding in the width and height */
     position: fixed; /* Fixed position */
-    top: 50px; /* Height of the navbar */
+    top: 18%; /* Height of the navbar */
     left: 0;
-    bottom: 60px; /* Height of the footer */
     overflow-y: auto; /* Allows scrolling within the menu */
   }
   
