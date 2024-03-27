@@ -1,0 +1,56 @@
+.course-menu {
+    width: 250px; /* Width of the menu */
+    background-color: #e8f0fe; /* Light blue background */
+    border-radius: 0 50px 50px 0; /* Rounded corners on the right */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height of the viewport */
+    box-sizing: border-box; /* Include padding in the width and height */
+    position: fixed; /* Fixed position */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+  }
+  
+  .course-header {
+    color: #333; /* Dark text color for the header */
+    margin-bottom: 1rem; /* Spacing below the header */
+    font-size: 1.5em; /* Larger font size for the header */
+  }
+  
+  .course-sections {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    flex-grow: 1; /* Allow the section list to fill available space */
+  }
+  
+  .course-sections li {
+    padding: 10px 0; /* Padding for each list item */
+    border-bottom: 1px solid #ccc; /* Separator lines */
+    color: #333; /* Text color for list items */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .course-sections li:last-child {
+    border-bottom: none; /* No border for the last item */
+  }
+  
+  .course-bottom-links {
+    margin-top: auto; /* Push the links to the bottom */
+    padding-top: 1rem; /* Spacing above the links */
+    border-top: 1px solid #ccc; /* Separator line above the links */
+  }
+  
+  .course-bottom-links div {
+    padding: 10px 0; /* Padding for each link */
+    color: #333; /* Text color for the links */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  /* Hover effect for list items and links */
+  .course-sections li:hover,
+  .course-bottom-links div:hover {
+    background-color: #d0d9f7; /* Lighter shade on hover */
+  }
+  
