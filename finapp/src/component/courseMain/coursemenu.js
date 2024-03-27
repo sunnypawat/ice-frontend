@@ -1,5 +1,5 @@
 import React from 'react';
-import './courseMenu.css';
+import './coursemenu.css';
 //import avatar from './path-to-your-image.jpg'; // Make sure to put the correct path to your image file here
 
 const CourseMenu = () => {
