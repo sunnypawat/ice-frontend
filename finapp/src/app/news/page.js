@@ -3,57 +3,26 @@ import Image from 'next/image'
 import NewsHighlight from '@/component/news/NewsHighlight'
 import NewCard from '@/component/news/NewsCard'
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 export default function News() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulated data from Postman
-    const simulatedData = [
-      {
-        "ID": 1,
-        "Title": "Biotech Firms Breakthrough in Gene Editing",
-        "Subtitle": "Gene editing offers new possibilities for treatment.",
-        "Description": "Biotech companies announce breakthroughs in gene editing techniques, offering new avenues for treating previously undruggable diseases.",
-        "Date": "2024-03-07T01:30:00.000Z",
-        "Author": "Hannah Altman",
-        "Picture": "http://example.com/images/gene_editing.jpg"
-    },
-    {
-        "ID": 2,
-        "Title": "Biotech Firms Breakthrough in Gene Editing",
-        "Subtitle": "Gene editing offers new possibilities for treatment.",
-        "Description": "Biotech companies announce breakthroughs in gene editing techniques, offering new avenues for treating previously undruggable diseases.",
-        "Date": "2024-03-07T01:30:00.000Z",
-        "Author": "Hannah Altman",
-        "Picture": "http://example.com/images/gene_editing.jpg"
-    },
-    {
-        "ID": 3,
-        "Title": "Biotech Firms Breakthrough in Gene Editing",
-        "Subtitle": "Gene editing offers new possibilities for treatment.",
-        "Description": "Biotech companies announce breakthroughs in gene editing techniques, offering new avenues for treating previously undruggable diseases.",
-        "Date": "2024-03-07T01:30:00.000Z",
-        "Author": "Hannah Altman",
-        "Picture": "http://example.com/images/gene_editing.jpg"
-    },
-    {
-        "ID": 4,
-        "Title": "Biotech Firms Breakthrough in Gene Editing",
-        "Subtitle": "Gene editing offers new possibilities for treatment.",
-        "Description": "Biotech companies announce breakthroughs in gene editing techniques, offering new avenues for treating previously undruggable diseases.",
-        "Date": "2024-03-07T01:30:00.000Z",
-        "Author": "Hannah Altman",
-        "Picture": "http://example.com/images/gene_editing.jpg"
-    }
-    ];
-
-    setData(simulatedData); // Set the simulated data as your state
-    setLoading(false); // Set loading to false since we're not fetching data
-
-    // Commenting out the fetchData call to simulate data loading
-    // fetchData();
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:8080/api/news');
+        console.log(response.data); // Log the received data to the console
+        setData(response.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+  
+    fetchData();
   }, []);
 
   // Assuming the first news item is used for the highlight if available
