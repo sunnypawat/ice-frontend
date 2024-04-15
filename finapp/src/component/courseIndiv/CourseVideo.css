@@ -1,0 +1,26 @@
+.courseText {
+    margin: 3% 3% 3% 3%;
+}
+
+.courseTextTitle {
+    margin: 1% 1%;
+}
+
+.news-card-image {
+    width: 100%;
+    height: 300px; /* You can adjust this as needed */
+    border-radius: 15px;
+    border: 1px solid #e0e0e0;
+    object-fit: cover;
+    margin: 10px auto;
+  }
+
+.courseTextSubtitle {
+    margin: 1% 1%;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.courseVideoContainer {
+    width: 100%;
+}
