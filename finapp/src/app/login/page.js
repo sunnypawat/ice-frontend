@@ -2,32 +2,65 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Login.css'
+import axios from 'axios';
 
 export default function Login() {
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
-  const [usernameError, setUsernameError] = useState('')
-  const [passwordError, setPasswordError] = useState('')
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [usernameError, setUsernameError] = useState('');
+  const [passwordError, setPasswordError] = useState('');
+  const apiUrl = process.env.NEXT_PUBLIC_BASE_API_URL;
 
-  const onButtonClick = () => {
-    setUsernameError('')
-    setPasswordError('')
+  const onButtonClick = async () => {
+    setUsernameError('');
+    setPasswordError('');
 
     if ('' === username) {
-      setUsernameError('*')
-      return
+      setUsernameError('Username is required');
+      return;
     }
 
     if ('' === password) {
-      setPasswordError('*')
-      return
+      setPasswordError('Password is required');
+      return;
     }
 
-    if (password.length < 7) {
-      setPasswordError('*')
-      return
+    // Attempt to log in
+    try {
+      console.log(process.env);
+      console.log(apiUrl + '/api/login');
+      const response = await axios.post(apiUrl+ '/api/login', { username, password }, {
+      withCredentials: true});
+      console.log('Login successful', response.data);
+      // Here you could redirect the user or save the login state
+    } catch (error) {
+      console.error('Login error', error);
+      // More robust error handling
+      if (error.response) {
+        // The request was made and the server responded with a status code
+        // that falls out of the range of 2xx
+        console.error('Error data:', error.response.data);
+        console.error('Error status:', error.response.status);
+        if (error.response.status === 401) {
+          // Handle specific status code errors (e.g., invalid credentials)
+          setPasswordError('Invalid username or password');
+        } else {
+          // Handle other statuses
+          setPasswordError('Login failed. Please try again.');
+        }
+      } else if (error.request) {
+        // The request was made but no response was received
+        // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+        // http.ClientRequest in node.js
+        console.error('No response received');
+        setPasswordError('Server did not respond. Please try again later.');
+      } else {
+        // Something happened in setting up the request that triggered an Error
+        console.error('Error', error.message);
+        setPasswordError('An error occurred. Please try again later.');
+      }
     }
-  }
+  };
 
   return (
     <div className="login" id="login">
