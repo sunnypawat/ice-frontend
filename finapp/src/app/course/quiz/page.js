@@ -9,24 +9,29 @@ const QuizPage = () => {
   const quizData = {
     quizQuestion: "Which one is a trading strategy?",
     quizImage: "http://example.com/images/mars.jpg", // This will be the quiz-related image if needed.
-    quizAnswerList: ["a. trading a stock all day", "b. trading a stock all day", "c. trading a stock all day"],
+    quizAnswerList: ["a. buy bitcoin", "b. buy ethereum", "c. trading a stock all day"],
     quizCorrectAnswer: "c. trading a stock all day",
   };
 
   const handleAnswerClick = (answer) => {
     setSelectedAnswer(answer);
+    // Reset correctness state each time a new answer is clicked
+    setIsCorrect(null);
   };
 
   const handleConfirmClick = () => {
-    setIsCorrect(selectedAnswer === quizData.quizCorrectAnswer);
+    // Only check correctness if an answer has been selected
+    if (selectedAnswer) {
+      setIsCorrect(selectedAnswer === quizData.quizCorrectAnswer);
+    }
   };
 
   return (
     <div className="quiz-container">
       <div className="quiz-header">
-        <h1>Quiz Time: shorterm trading</h1>
+        <h1>Quiz Time: Short-Term Trading</h1>
         <div className="quiz-level">Level: Basic 2</div>
-        <div className="life">❤️ 5</div>
+        <div className="likes">❤️ 5</div>
       </div>
       <div className="quiz-question">
         <h2>{quizData.quizQuestion}</h2>
@@ -41,7 +46,7 @@ const QuizPage = () => {
             </button>
           ))}
         </div>
-        <button className="confirm-btn" onClick={handleConfirmClick}>
+        <button className="confirm-btn" onClick={handleConfirmClick} disabled={!selectedAnswer}>
           Confirm
         </button>
         {isCorrect !== null && (
