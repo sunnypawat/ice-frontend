@@ -50,15 +50,15 @@
   }
   
   /* Hover effect for quiz answers */
-  .quiz-answer:hover {
+.quiz-answer:hover {
     background-color: #f2f2f2; /* Light grey background on hover */
-  }
+}
   
   /* Selected answer style */
-  .selected {
-    background-color: #e9ecef; /* Slightly different background for selected answer */
+.selected {
+    background-color: #8BBBF8; /* Slightly different background for selected answer */
     font-weight: bold; /* Make the selected answer bold */
-  }
+}
 
 /* Answer buttons styling */
 .answer-btn {
@@ -67,10 +67,26 @@
   /* Other styles remain the same */
 }
 
-/* Confirm button styling */
 .confirm-btn {
-  width: calc(100% - 20px); /* Full width minus padding */
-  /* Other styles remain the same */
+    background-color: rgb(51, 185, 80); /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.confirm-btn:hover {
+    background-color: #3e8e41; /* A darker shade of green for the hover state */
+}
+
+.confirm-btn:disabled {
+    background-color: #c8e6c9; /* A lighter shade of green to indicate it's disabled */
+    color: white;
+    cursor: not-allowed;
 }
 
 /* Footer buttons styling */
