@@ -30,8 +30,8 @@ export default function Course() {
             key={course.id} // Assume each course has a unique 'id'
             title={course.title} 
             description={course.description}
-            level='Level 1: Basic'
-            access={false} // Assume 'access' is a boolean
+            level={course.level} 
+            access={course.access} // Assume 'access' is a boolean
           />
         ))}
     </div>
