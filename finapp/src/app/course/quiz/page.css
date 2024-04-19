@@ -1,59 +1,83 @@
 .quiz-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centers content vertically in the container */
-    align-items: center; /* Centers content horizontally */
-    min-height: 100vh; /* Full height of the viewport */
-    padding-top: 60px; /* Adjust if necessary to account for navbar height */
-    padding-bottom: 60px; /* Adjust if necessary to account for footer height */
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7; /* Optional: sets a background color for the whole quiz area */
-  }
-  
-  /* Header styling */
-  .quiz-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically in the container */
+  align-items: center; /* Centers content horizontally */
+  min-height: 100vh; /* Full height of the viewport */
+  padding-top: 60px; /* Adjust if necessary to account for navbar height */
+  padding-bottom: 60px; /* Adjust if necessary to account for footer height */
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7; /* Optional: sets a background color for the whole quiz area */
+}
+
+/* Header styling */
+.quiz-header {
+  width: 100%;
+  max-width: 600px; /* Adjust based on your design requirements */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.quiz-header h1 {
+  font-size: 24px;
+}
+
+/* Quiz level and likes styling */
+.quiz-level, .likes {
+  font-size: 14px;
+}
+
+/* Question area */
+.quiz-question {
+  width: 100%;
+  max-width: 600px; /* Adjust based on your design requirements */
+  text-align: center; /* Centers the text inside the question area */
+}
+
+.quiz-answer {
+    display: block;
     width: 100%;
-    max-width: 600px; /* Adjust based on your design requirements */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
+    padding: 10px;
+    margin-bottom: 10px; /* Space between buttons */
+    background-color: #fff; /* Background color */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Changes cursor to indicate this is clickable */
+    transition: background-color 0.2s ease-in-out; /* Smooth transition for hover effect */
+    text-align: left; /* Align text to the left */
   }
   
-  .quiz-header h1 {
-    font-size: 24px;
+  /* Hover effect for quiz answers */
+  .quiz-answer:hover {
+    background-color: #f2f2f2; /* Light grey background on hover */
   }
   
-  /* Quiz level and likes styling */
-  .quiz-level, .likes {
-    font-size: 14px;
+  /* Selected answer style */
+  .selected {
+    background-color: #e9ecef; /* Slightly different background for selected answer */
+    font-weight: bold; /* Make the selected answer bold */
   }
-  
-  /* Question area */
-  .quiz-question {
-    width: 100%;
-    max-width: 600px; /* Adjust based on your design requirements */
-    text-align: center; /* Centers the text inside the question area */
-  }
-  
-  /* Answer buttons styling */
-  .answer-btn {
-    width: calc(100% - 20px); /* Full width minus padding */
-    margin: 0.5rem 0;
-    /* Other styles remain the same */
-  }
-  
-  /* Confirm button styling */
-  .confirm-btn {
-    width: calc(100% - 20px); /* Full width minus padding */
-    /* Other styles remain the same */
-  }
-  
-  /* Footer buttons styling */
-  .quiz-footer {
-    width: 100%;
-    max-width: 600px; /* Adjust based on your design requirements */
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-  }
+
+/* Answer buttons styling */
+.answer-btn {
+  width: calc(100% - 20px); /* Full width minus padding */
+  margin: 0.5rem 0;
+  /* Other styles remain the same */
+}
+
+/* Confirm button styling */
+.confirm-btn {
+  width: calc(100% - 20px); /* Full width minus padding */
+  /* Other styles remain the same */
+}
+
+/* Footer buttons styling */
+.quiz-footer {
+  width: 100%;
+  max-width: 600px; /* Adjust based on your design requirements */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
