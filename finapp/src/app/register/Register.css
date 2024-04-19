@@ -1,0 +1,89 @@
+.login {
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
+}
+
+.banner {
+    max-width: 50%;
+    background: linear-gradient(180deg, #8ABDFF 0%, rgba(150, 82, 255, 0.29) 99.99%, #9747FF 100%);
+    height: 100%;
+    color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 20px;
+    padding: 5% 3%;
+}
+
+.bannerHeader {
+    margin: 10px auto;
+    font-weight: 600;
+    font-size: 48px;
+}
+
+.bannerDescription {
+    margin: 20px auto;
+    font-weight: 400;
+}
+
+.loginTitle {
+    color: #0070FF;
+    font-weight: 500;
+    margin: 20px auto;
+}
+
+.loginContainer {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.loginLoginButton { 
+    background: #0070FF;
+    width: 300px;
+    height: 40px;
+    font-size: 15px;
+    color: white;
+    border-radius: 33px;
+    margin: 5px auto;
+}
+
+.accountButton {
+    color: #0070FF;
+    background: white;
+    width: 288px;
+    height: 40px;
+    font-size: 15px;
+    border: 1px solid #0070FF;
+    border-radius: 33px;
+    margin: 10px auto;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.inputBox {
+    background: #C0E0FC;
+    border-radius: 20px;
+    width: 300px;
+    height: 48px;
+    font-size: 20px;
+    color: black;
+    padding: 10px 10px;
+    margin: 5px 10px;
+}
+
+.resetPasswordContainer {
+    margin: 5px auto;
+    color: #0070FF;
+}
+
+hr {
+    width: 40%;
+    margin: 10px auto;
+}
