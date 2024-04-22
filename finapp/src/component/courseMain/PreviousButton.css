@@ -1,0 +1,34 @@
+.previous-button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%; /* Adjust the height as needed */
+    padding: 0 1em; /* Add padding on the sides */
+    background-color: white;
+  }
+  
+  .previous-button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+  }
+  
+  .previous-button:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+    border-color: #666; /* Darker border on hover */
+  }
+  
+  .previous-button:focus {
+    outline: none;
+    border-color: #555; /* Different border color when the button is focused */
+  }
+  
+  .previous-button:active {
+    transform: translateY(2px); /* Slight push effect when the button is clicked */
+  }
+  
