@@ -8,11 +8,12 @@ import axios from 'axios';
 export default function News() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const apiUrl = process.env.NEXT_PUBLIC_BASE_API_URL;
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/news');
+        const response = await axios.get(apiUrl+'/api/news');
         console.log(response.data); // Log the received data to the console
         setData(response.data);
       } catch (error) {
