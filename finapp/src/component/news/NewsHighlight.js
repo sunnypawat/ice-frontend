@@ -13,10 +13,6 @@ const NewsHighlight = ({ imageSrc, title, description, date, summary, keyTakeawa
           <strong>Summary:</strong> 
           <p>{summary}</p>
         </div>
-        <div className="news-key-takeaway">
-          <strong>Key Takeaway:</strong> 
-          <p>{keyTakeaway}</p>
-        </div>
       </div>
     </div>
   );
