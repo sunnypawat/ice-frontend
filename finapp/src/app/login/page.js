@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Login.css'
+import axios from 'axios';
 
 export default function Login() {
   const [username, setUsername] = useState('')
@@ -10,14 +11,15 @@ export default function Login() {
   const [usernameError, setUsernameError] = useState('')
   const [passwordError, setPasswordError] = useState('')
   const router = useRouter()
+  const apiUrl = process.env.NEXT_PUBLIC_BASE_API_URL;
 
-  const onButtonClick = () => {
-    setUsernameError('')
-    setPasswordError('')
+  const onButtonClick = async () => {
+    setUsernameError('');
+    setPasswordError('');
 
     if ('' === username) {
-      setUsernameError('*')
-      return
+      setUsernameError('Username is required');
+      return;
     }
 
     if ('' === password) {
@@ -30,10 +32,6 @@ export default function Login() {
       return
     }
   }
-
-  const navigateTo = (sectionId) => {
-    router.push(sectionId, { scroll: false })
-  };
 
   return (
     <div className="login" id="login">
