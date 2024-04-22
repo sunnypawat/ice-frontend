@@ -1,14 +1,16 @@
 "use client"
 import React, { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Login.css'
 import axios from 'axios';
 
 export default function Login() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [usernameError, setUsernameError] = useState('');
-  const [passwordError, setPasswordError] = useState('');
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+  const [usernameError, setUsernameError] = useState('')
+  const [passwordError, setPasswordError] = useState('')
+  const router = useRouter()
   const apiUrl = process.env.NEXT_PUBLIC_BASE_API_URL;
 
   const onButtonClick = async () => {
@@ -84,6 +86,7 @@ export default function Login() {
         <div className={'inputContainer'}>
           <FontAwesomeIcon />
           <input
+            type="password"
             value={password}
             placeholder="Enter password"
             onChange={(ev) => setPassword(ev.target.value)}
@@ -93,7 +96,7 @@ export default function Login() {
         </div>
         <br />
         <div className={'inputContainer'}>
-          <input className={'loginLoginButton'} type="button" onClick={onButtonClick} value={'Log in'} />
+          <button className={'loginLoginButton'} onClick={onButtonClick}>Login</button>
         </div>
 
         <div className='resetPasswordContainer'>
@@ -103,7 +106,7 @@ export default function Login() {
         <hr></hr>
 
         <div className={'inputContainer'}>
-          <input className={'accountButton'} type="button" onClick={onButtonClick} value={'Create account'} />
+        <button className={'accountButton'} onClick={() => navigateTo('/register')}>Register here</button>
         </div>
       </div>
 

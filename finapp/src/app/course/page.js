@@ -3,6 +3,9 @@ import Image from 'next/image'
 import CourseBanner from '@/component/courseMain/CourseBanner'
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import NextButton from '@/component/courseMain/NextButton'
+import PreviousButton from '@/component/courseMain/PreviousButton'
+import CourseMenu from '@/component/courseMain/coursemenu'
 
 export default function Course() {
   const [courses, setCourses] = useState([]); // State to store course data
@@ -34,6 +37,7 @@ export default function Course() {
             access={course.access} // Assume 'access' is a boolean
           />
         ))}
+
     </div>
   );
 }

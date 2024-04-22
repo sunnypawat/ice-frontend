@@ -13,6 +13,7 @@ p {
     min-height: 15%;
     justify-content: space-between;
     flex-direction: column;
+    position: fixed; /* Fixed position */
 }
   
 .container {
