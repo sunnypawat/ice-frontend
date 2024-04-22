@@ -1,15 +1,19 @@
-"use client"
-import React, { useState } from 'react';
-import './Page.css';
+"use client";
+import React, { useState } from "react";
+import "./page.css";
 
 const QuizPage = () => {
-  const [selectedAnswer, setSelectedAnswer] = useState('');
+  const [selectedAnswer, setSelectedAnswer] = useState("");
   const [isCorrect, setIsCorrect] = useState(null);
 
   const quizData = {
     quizQuestion: "Which one is a trading strategy?",
     quizImage: "http://example.com/images/mars.jpg", // This will be the quiz-related image if needed.
-    quizAnswerList: ["a. buy bitcoin", "b. buy ethereum", "c. trading a stock all day"],
+    quizAnswerList: [
+      "a. buy bitcoin",
+      "b. buy ethereum",
+      "c. trading a stock all day",
+    ],
     quizCorrectAnswer: "c. trading a stock all day",
   };
 
@@ -39,19 +43,27 @@ const QuizPage = () => {
           {quizData.quizAnswerList.map((answer, index) => (
             <button
               key={index}
-              className={`answer-btn ${selectedAnswer === answer ? 'selected' : ''}`}
+              className={`answer-btn ${
+                selectedAnswer === answer ? "selected" : ""
+              }`}
               onClick={() => handleAnswerClick(answer)}
             >
               {answer}
             </button>
           ))}
         </div>
-        <button className="confirm-btn" onClick={handleConfirmClick} disabled={!selectedAnswer}>
+        <button
+          className="confirm-btn"
+          onClick={handleConfirmClick}
+          disabled={!selectedAnswer}
+        >
           Confirm
         </button>
         {isCorrect !== null && (
-          <div className={`result-message ${isCorrect ? 'correct' : 'incorrect'}`}>
-            {isCorrect ? 'Correct Answer!' : 'Wrong Answer!'}
+          <div
+            className={`result-message ${isCorrect ? "correct" : "incorrect"}`}
+          >
+            {isCorrect ? "Correct Answer!" : "Wrong Answer!"}
           </div>
         )}
       </div>
