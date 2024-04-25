@@ -6,6 +6,9 @@ import React, { useState, useEffect } from 'react';
 import NextButton from '@/component/courseMain/NextButton'
 import PreviousButton from '@/component/courseMain/PreviousButton'
 import CourseMenu from '@/component/courseMain/coursemenu'
+import CourseText from '@/component/courseIndiv/CourseText'
+import CourseVideo from '@/component/courseIndiv/CourseVideo'
+import CourseQuiz from '@/component/courseIndiv/CourseQuiz'
 
 export default function Course() {
   const [courses, setCourses] = useState([]); // State to store course data
